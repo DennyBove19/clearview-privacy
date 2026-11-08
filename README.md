@@ -1,4 +1,4 @@
-# Privacy policy source (Omega for Salesforce)
+# Privacy policy source (ClearView for Salesforce)
 
 Host this anywhere with a stable public URL and paste that URL into the Chrome Web
 Store's **Privacy policy URL** field. A GitHub Gist, a page on your own domain, or a
@@ -11,41 +11,41 @@ Dev-only file. `dev-handoff/` never ships and `.md` is skipped by the packager.
 
 ---
 
-# Privacy Policy for Omega for Salesforce
+# Privacy Policy for ClearView for Salesforce
 
 **Effective date:** TODO
 **Publisher:** BoveDev
 
-## What Omega is
+## What ClearView is
 
-Omega is a Chrome side panel that displays Salesforce records to employees of the
+ClearView is a Chrome side panel that displays Salesforce records to employees of the
 organization that installed it. It is distributed unlisted and is intended for that
 organization's staff, not for the general public.
 
-## How Omega signs you in
+## How ClearView signs you in
 
-Omega has no accounts, no passwords and no login of its own. It reads the Salesforce
+ClearView has no accounts, no passwords and no login of its own. It reads the Salesforce
 session cookie already present in your browser for your company's Salesforce host and
-uses it to call the Salesforce API as you. It follows that Omega can only ever see the
+uses it to call the Salesforce API as you. It follows that ClearView can only ever see the
 records your own Salesforce user is permitted to see.
 
 That session cookie is read at the moment a request is made, attached to that request,
 and discarded. It is never written to disk, never copied anywhere, and never sent to any
 destination other than the Salesforce host it came from.
 
-## What Omega reads
+## What ClearView reads
 
 From Salesforce, on your behalf: leads, opportunities, orders and order line items,
 service appointments, work orders, users and Chatter posts. In practice this includes
 customer names, street addresses, phone numbers, contract amounts, payment dates and the
 names of employees.
 
-Omega reads this data to display it. It does not build a profile, score anyone, or make
+ClearView reads this data to display it. It does not build a profile, score anyone, or make
 decisions about anyone.
 
 ## What stays on your device
 
-Omega caches what it reads so that moving between tabs does not refetch thousands of
+ClearView caches what it reads so that moving between tabs does not refetch thousands of
 records. All of this lives in Chrome's extension storage on your own computer:
 
 - **Settings** (`chrome.storage.sync`): your selected office, timeframe, report defaults,
@@ -63,7 +63,7 @@ None of this is transmitted to BoveDev or to anyone else.
 
 ## What leaves your device, and where it goes
 
-Omega talks to four destinations, and only these four.
+ClearView talks to four destinations, and only these four.
 
 **Your company's Salesforce org.** All record reads and writes. This is your own data
 going back to your own system.
@@ -76,7 +76,7 @@ phone number, address or message body is stored in Firestore. Team configuration
 office regions and the manager roster is read from Salesforce, not from Firestore.
 
 **The OSRM routing service** (`router.project-osrm.org`). When you use route planning,
-Omega sends appointment coordinates, rounded to four decimal places, to get driving times
+ClearView sends appointment coordinates, rounded to four decimal places, to get driving times
 between stops. No names, no addresses as text, and no record identifiers are sent. Results
 are cached locally for a week.
 
@@ -86,28 +86,28 @@ and the message text go to ClickSend, which delivers the SMS. Managers supply th
 ClickSend credentials; those credentials are stored in Chrome's extension storage on the
 manager's own device.
 
-## What Omega never does
+## What ClearView never does
 
 - No analytics, telemetry, crash reporting or usage tracking of any kind.
 - No advertising, and no third-party trackers or SDKs.
 - No data is sent to BoveDev. The developer has no server and receives nothing.
 - No data is sold, rented or transferred to anyone.
 - No data is used to determine creditworthiness or for any lending purpose.
-- No code is downloaded and run. Everything Omega executes ships inside the extension.
+- No code is downloaded and run. Everything ClearView executes ships inside the extension.
 
 ## Retention and deletion
 
 Cached Salesforce data and settings live on your device until you remove them.
-Uninstalling Omega deletes all of it. You can also clear it without uninstalling from
-`chrome://extensions`, by opening Omega's details and removing its site data.
+Uninstalling ClearView deletes all of it. You can also clear it without uninstalling from
+`chrome://extensions`, by opening ClearView's details and removing its site data.
 
-Data in Salesforce is governed by your employer's own retention policy, not by Omega. The
+Data in Salesforce is governed by your employer's own retention policy, not by ClearView. The
 messaging log in Firestore is controlled by your organization's administrator. Message
 delivery records held by ClickSend are governed by ClickSend's own policy.
 
 ## Children
 
-Omega is a workplace tool. It is not directed at children and is not intended for anyone
+ClearView is a workplace tool. It is not directed at children and is not intended for anyone
 under 13.
 
 ## Changes to this policy
@@ -117,6 +117,6 @@ posted at this same URL.
 
 ## Contact
 
-Questions about this policy, or requests about data Omega holds:
+Questions about this policy, or requests about data ClearView holds:
 
 bovedev@gmail.com
